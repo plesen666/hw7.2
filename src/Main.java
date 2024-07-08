@@ -30,11 +30,45 @@ public class Main {
         int birthRate = 17; // рождаемость на тысячу человек
         int deathRate = 8; // смертность на тысячу человек
 
-        for (int year = 0; year < 10; year++) {
+        for (int year = 1; year < 11; year++) {
             population += (birthRate - deathRate) * population / 1000 * 10;
-
-
-            System.out.println(" Год " + year + " ,численность населения составляет "+ population );
+            System.out.println(" Год " + year + " ,численность населения составляет " + population);
         }
+        System.out.println(" Упражнение 4");
+
+
+        double money = 15000;
+        int i1 = 0;
+        double bankPercent = 0.07;
+        int all = 12_000_000;
+        while (money < all) {
+            i1 = i1 +1;
+            money = money + money * bankPercent;
+            System.out.println("Сумма " + money + " , количество месяцев " + i1);
+        }
+
+
+            System.out.println(" Упражнение 5");
+            double money1 = 15000;
+            int period = 6;
+            int years = 9;
+            int allMonth = years * 12;
+            double bankPercent2 = 0.07;
+            for (int i2 = 0; i2 <= allMonth; i2++) {
+                money1 = money1 + money1 * bankPercent2;
+                if (i % period == 0) {
+                    System.out.println("Сумма " + money1 + " , количество месяцев " + i2);
+                }
+                System.out.println(" Упражнение 6");
+                for (int fr = 1; fr < 31; fr += 7) {
+                    System.out.println("Сегодня пятница " + fr + " необходимо подготовить отчет");
+                }
+            }
+            System.out.println(" Упражнение 7");
+                int currentYear = 2023;
+                for (int i3 = 0; i3 < currentYear + 100; i3 += 79) {
+                    if (i3 > currentYear - 200) {
+                        System.out.println(i3);
+                    }
     }
-}
+}}
