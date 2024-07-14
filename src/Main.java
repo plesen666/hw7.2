@@ -1,3 +1,4 @@
+import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -34,41 +35,83 @@ public class Main {
             population += (birthRate - deathRate) * population / 1000 * 10;
             System.out.println(" Год " + year + " ,численность населения составляет " + population);
         }
+
         System.out.println(" Упражнение 4");
 
 
-        double money = 15000;
-        int i1 = 0;
-        double bankPercent = 0.07;
-        int all = 12_000_000;
-        while (money < all) {
-            i1 = i1 +1;
-            money = money + money * bankPercent;
-            System.out.println("Сумма " + money + " , количество месяцев " + i1);
+        int total2 = 15000;
+        double amountOfSaving = 12000000;
+        double rate2 = 1.07;
+        int month2 = 0;
+        while (total2 < amountOfSaving) {
+            total2 *= rate2; //сумму ежемесячного накопления с учетом процента.
+            month2++; //считаем количество месяцев;
+        }
+        System.out.println(" Месяц " + month2 + " , сумма накоплений составляет " + total2 + " рублей. ");
+
+        System.out.println(" Упражнение 5");
+
+
+        int total3 = 15000;
+        double amountOfSaving2 = 12000000;
+        int month3 = 0;
+        while (total3 < amountOfSaving2) {
+            total3 *= rate2;
+
+            month3++;
+
+            if (month3 % 6 == 0) {
+
+                System.out.println(" Месяц " + month3 + " , сумма накоплений составляет " + total3 + " рублей. ");
+
+
+            }
         }
 
 
-            System.out.println(" Упражнение 5");
-            double money1 = 15000;
-            int period = 6;
-            int years = 9;
-            int allMonth = years * 12;
-            double bankPercent2 = 0.07;
-            for (int i2 = 0; i2 <= allMonth; i2++) {
-                money1 = money1 + money1 * bankPercent2;
-                if (i % period == 0) {
-                    System.out.println("Сумма " + money1 + " , количество месяцев " + i2);
-                }
-                System.out.println(" Упражнение 6");
-                for (int fr = 1; fr < 31; fr += 7) {
-                    System.out.println("Сегодня пятница " + fr + " необходимо подготовить отчет");
-                }
+        System.out.println(" Упражнение 6");
+
+        int total4 = 15000;
+        int yearOrMoth = 108;
+        int month4 = 0;
+        while (month4 < yearOrMoth) {
+            total4 *= rate2;
+            month4++;
+            if (month4 % 6 == 0) {
+                System.out.println(" Месяц" + month4 + " , сумма накоплений составляет " + total4 + " рублей. ");
             }
-            System.out.println(" Упражнение 7");
-                int currentYear = 2023;
-                for (int i3 = 0; i3 < currentYear + 100; i3 += 79) {
-                    if (i3 > currentYear - 200) {
-                        System.out.println(i3);
-                    }
+
+
+        }
+
+        System.out.println(" Упражнение 7");
+
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Введите первую пятницу месяца. ");
+
+        int ferstFriday = sc.nextInt();
+
+        for (; ferstFriday < 31; ferstFriday += 7) {
+
+            System.out.println(" Сегодня пятница " + ferstFriday + " необходимо подготовить отчет");
+
+        }
+
+        System.out.println(" Упражнение 8");
+
+        int year=1975;
+        int lastYear=year -200;
+        int nextYear= year +100;
+        int year2=0;
+        for (year2= lastYear; year2<=nextYear;year2++) {
+            if ( year2%79==0) {
+                System.out.println(" Комета прилетает " + year2 + " года.");
+
+            }
+
+        }
     }
-}}
+}
+
